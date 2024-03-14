@@ -8,6 +8,8 @@ export const Navigation = () => {
       <span> | </span>
       <Link to="/about">O nás</Link>
       <span> | </span>
+      <Link to="/centers">Pobočky</Link>
+      <span> | </span>
       <Link to="/contact">Kontakt</Link>
     </nav>
   )
