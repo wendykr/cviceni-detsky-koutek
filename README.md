@@ -56,7 +56,7 @@ Budeme pokračovat v projektu dětského koutku. Přidáme možnost zobrazit sez
 1. Pokračujte v projektu z předchozího cvičení.
 2. Nejprve do projektu přidejte stránku, která správně ošetří přístup na neexistující stránku, tedy chybu 404.
 3. Dále přidejte do navigace stránku *Pobočky* a vytvořte pro ni samostatnou komponentu `CentersPage`. Na této stránce budeme chtít zobrazit jednotlivé pobočky našeho dětského koutku (viz další bod).
-4. Rozjeďte si API server s daty. Naklonujte si k sobě repozitář [api-centers](https://github.com/Czechitas-podklady-WEB/api-centers) a spusťte v něm `jsonhost` dle instrukcí v README. Prohlédněte si data na endpointu `/api/centers`.
+4. Rozjeďte si API server s daty. Naklonujte si k sobě repozitář [api-centers](https://github.com/Czechitas-podklady-WEB/api-centers) a spusťte v něm `jsonhost` pomocí příkazu `npx jsonhost@latest`. Prohlédněte si data na endpointu `/api/centers`.
 5. V komponentě `CentersPage` si vytvořte stav `center` a do něj pomocí klasického postupu s `useEffect` a `fetch` stáhněte pole dat z API. Pomocí mapování zobrazte seznam odkazů na jednotlivé pobočky. Odkaz bude vždy cesta `/pobocky/id-pobocky`. Zatím nezobrazujte detail pobočky, pouze její název a adresu. Tento seznam bude sloužit jako navigace mezi jednotlivými pobočkami.
 6. Vytvořte komponentu `CenterDetail` pro zobrazení detailu pobočky. Tato komponenta bude sídlit pod cestou `/pobocky/:id`. Pomocí useParams a API endpointu `/api/centers/:id` získejte položku podle parametru `:id`. Zobrazte detail pobočky s otvíracími hodinami i popisem.
 7. Komponentu `CenterDetail` zobrazte jako `<Outlet />` uvnitř komponenty `CentersPage`.
