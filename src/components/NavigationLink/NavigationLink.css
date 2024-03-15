@@ -1,0 +1,21 @@
+.navigation__link {
+  color: #2d1f16;
+  text-decoration: none;
+}
+
+.navigation__link:hover {
+  color: #13529e;
+}
+
+.active--nav {
+  color: #13529e;
+}
+
+.active--nav::after {
+  content: "";
+  height: 0.125rem;
+  width: 100%;
+  background-color: #13529e;
+  margin: 0.0625rem auto 0 auto;
+  display: block;
+}

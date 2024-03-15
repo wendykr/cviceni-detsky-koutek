@@ -1,0 +1,18 @@
+.subtitle {
+  font-weight: 600;
+}
+
+.opening__row {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.opening__row--day, .opening__row--time {
+  margin: 2px 0;
+}
+
+.opening__row--day {
+  width: 80px;
+}

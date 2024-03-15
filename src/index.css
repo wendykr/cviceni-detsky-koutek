@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #2d1f16;
 }
 
 .container {
-  max-width: 26rem;
+  max-width: 45rem;
   margin-right: auto;
   margin-left: auto;
 }

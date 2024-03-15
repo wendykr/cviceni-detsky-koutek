@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import './CentersPage.css';
+import { Outlet, NavLink, useLocation } from 'react-router-dom';
 
 export const CentersPage = () => {
   const [centers, setCenters] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchCenters = async () => {
@@ -15,18 +17,25 @@ export const CentersPage = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div>
       <h1>Pobočky</h1>
       <h2>Seznam poboček</h2>
-      <ul>
+      <div className="centers__list">
         {
           centers.map(oneCenter =>
-            <li key={oneCenter.id}>
-              <Link to={`/centers/center/${oneCenter.id}`}>{oneCenter.name}</Link>
-            </li>
+            <NavLink
+              key={oneCenter.id}
+              to={`/centers/center/${oneCenter.id}`}
+                className={({ isActive }) =>
+                  isActive ? "centers__link active--center" : "centers__link"
+                }
+            >{oneCenter.name}</NavLink>
           )
         }
-      </ul>
+      </div>
+      {
+        location.pathname === '/centers' && <p>Naše pobočky se nacházejí na třech významných místech v Praze. Stačí si vybrat kliknutím jednu z nich z výše uvedených a zjistíte, kde můžete objevovat svět plný překvapení!</p>
+      }
       <Outlet />
     </div>
   )

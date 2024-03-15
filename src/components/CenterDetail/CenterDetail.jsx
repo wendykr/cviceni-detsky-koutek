@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './CenterDetail.css';
 import { useParams } from 'react-router-dom';
 
 export const CenterDetail = () => {
@@ -27,18 +28,20 @@ export const CenterDetail = () => {
   };
 
   return (
-    <div className="container">
+    <div>
       {centerData ? (
         <>
-          <h3>Detail pobočky - {centerData.name}</h3>
+          <iframe src={`https://frame.mapy.cz/s/${centerData.mapy}`} width="100%" height="280" frameborder="0"></iframe>
+          <h3>{centerData.name}</h3>
           <h4>{centerData.address}</h4>
-          {centerData && !centerData.open ? (
+          {centerData && centerData.open ? (
             <>
-              <p>Otevírací doba:</p>
-              <div>
+              <p className="subtitle">Otevírací doba:</p>
+              <div className="opening">
                 {Object.entries(centerData.open).map(([day, time], index) => (
-                  <div key={index}>
-                    <p>{dayTranslations[day]}: {time || 'Zavřeno'}</p>
+                  <div key={index} className="opening__row">
+                    <p className="opening__row--day">{dayTranslations[day]}:</p>
+                    <p className="opening__row--time">{time || 'Zavřeno'}</p>
                   </div>
                 ))}
               </div>

@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './Navigation.css';
+import { navLinkData } from '../../constants/navLink';
+import { NavigationLink } from '../NavigationLink/NavigationLink';
 
 export const Navigation = () => {
   return (
-    <nav>
-      <Link to="/">Domů</Link>
-      <span> | </span>
-      <Link to="/about">O nás</Link>
-      <span> | </span>
-      <Link to="/centers">Pobočky</Link>
-      <span> | </span>
-      <Link to="/contact">Kontakt</Link>
+    <nav className="navigation">
+      {
+        navLinkData.map((link, index) => (
+          <NavigationLink key={index} url={link.url} text={link.text} />
+        ))
+      }
     </nav>
   )
 }
