@@ -32,7 +32,7 @@
     "info": "Tento koutek je ideálním místem pro rodiče, kteří se chtějí zastavit na nákup v centru Prahy, ale mají s sebou děti. Koutek nabízí profesionální péči o děti, takže se mohou rodiče soustředit na své nákupy a mít klid v duši, že jsou jejich děti v bezpečí a dobře se baví."
   },
   {
-    "id": "vaclavak",
+    "id": 3,
     "name": "Koutek Václavák",
     "address": "Václavské nám. 816/49, 110 00 Praha 1",
     "capacity": 30,
