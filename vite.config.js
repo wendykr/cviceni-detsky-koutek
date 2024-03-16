@@ -2,9 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/cviceni-detsky-koutek/',
   root: './src',
-  publicDir: '../../public',
+  publicDir: '../public',
   server: {
     hmr: true,
   },

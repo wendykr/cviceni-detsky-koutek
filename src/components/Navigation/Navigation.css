@@ -1,7 +1,7 @@
 .navigation {
-  padding: 20px;
+  padding: 1.25rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
